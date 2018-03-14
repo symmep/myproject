@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            position: relative;
+            top: 200px;
+            left: 400px;
+        }
+        #container img{
+            border: 10px solid #CCCCCC;
+            -webkit-box-shadow: 5px 5px 5px rgba(50,50,50,.4);
+            -moz-box-shadow: 5px 5px 5px rgba(50,50,50,.4);
+            -o-box-shadow:5px 5px 5px rgba(50,50,50,.4) ;
+            -ms-box-shadow: 5px 5px 5px rgba(50,50,50,.4) ;
+            box-shadow: 5px 5px 5px rgba(50,50,50,.4);
+            top: 0;
+            left: 0;
+            transition: all 1s;
+            position: absolute;
+        }
+        #container img:first-child{
+            transform: rotate(25deg);
+        }
+        #container img:last-child{
+            transform: rotate(-20deg);
+        }
+        #container img:hover{
+            -webkit-box-shadow: 10px 10px 5px rgba(50,50,50,.4);
+            -moz-box-shadow: 10px 10px 5px rgba(50,50,50,.4);
+            -ms-box-shadow: 10px 10px 5px rgba(50,50,50,.4);
+            box-shadow: 10px 10px 5px rgba(50,50,50,.4);
+            -o-box-shadow: 10px 10px 5px rgba(50,50,50,.4);
+            transform: scale(1.2) rotate(0deg);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="img01.jpg" alt="">
+        <img src="img02.jpg" alt="">
+    </div>
+</body>
+</html>-
