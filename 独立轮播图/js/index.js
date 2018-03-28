@@ -3,7 +3,7 @@ require.config({
         jquery:'jquery-1.12.4'
     }
 });
-require(["jquery","独立轮播图/js/carousel"],function ($, Carousel){
+require(["jquery","./carousel"],function ($, Carousel){
     var settings1 = {
         selector : "#container1",
         imgArr : ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"],

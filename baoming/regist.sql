@@ -1,0 +1,136 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : localhost
+ Source Server Type    : MySQL
+ Source Server Version : 100128
+ Source Host           : localhost:3306
+ Source Schema         : regist
+
+ Target Server Type    : MySQL
+ Target Server Version : 100128
+ File Encoding         : 65001
+
+ Date: 14/03/2018 15:48:05
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for admin
+-- ----------------------------
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin`  (
+  `ad_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ad_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `ad_pwd` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  PRIMARY KEY (`ad_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of admin
+-- ----------------------------
+INSERT INTO `admin` VALUES (1, 'admin', 'admin');
+
+-- ----------------------------
+-- Table structure for article
+-- ----------------------------
+DROP TABLE IF EXISTS `article`;
+CREATE TABLE `article`  (
+  `a_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `c_id` int(255) DEFAULT NULL,
+  `date` datetime(0) DEFAULT NULL,
+  PRIMARY KEY (`a_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of article
+-- ----------------------------
+INSERT INTO `article` VALUES (1, '2017年度出版专业技术人员资格考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2017年度出版专业技术人员初级、中级资格考试各科目合格标准均为120分（试卷满分均为200分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：宋美琪、秦华)</span>\r\n       </div>', 1, '2018-02-01 13:45:41');
+INSERT INTO `article` VALUES (2, '2017年注册安全工程师合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2017年度注册安全工程师资格考试各科目合格标准均为60分（试卷满分均为100分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：宋美琪、秦华)</span>\r\n       </div>', 1, '2018-02-02 13:46:08');
+INSERT INTO `article` VALUES (3, '2017年度注册测绘师资格考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2017年度注册测绘师资格考试各科目合格标准均为72分（试卷满分均为120分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、王金雪)</span>\r\n       </div>', 1, '2018-02-03 13:46:58');
+INSERT INTO `article` VALUES (4, '2017年度注册设备监理师资格考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2017年度注册设备监理师资格考试《设备工程监理基础及相关知识》、《设备监理合同管理》和《质量、投资、进度控制》科目合格标准为84分（试卷满分均为140分），《设备监理综合实务与案例分析》科目合格标准为72分（试卷满分为120分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、王金雪)</span>\r\n       </div>', 1, '2018-02-04 13:47:20');
+INSERT INTO `article` VALUES (5, '2017年度一级注册计量师资格考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em\">\r\n	2017年度一级注册计量师资格考试各科目合格标准均为72分（试卷满分均为120分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：王金雪、秦华)</span>\r\n       </div>', 1, '2018-02-05 13:47:38');
+INSERT INTO `article` VALUES (6, '2017年上半年翻译专业资格（水平）考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2017年度上半年英语、日语、法语、阿拉伯语4个语种一、二、三级翻译专业资格（水平）考试各科目的合格标准均为60分（试卷满分均为100分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、闫妍)</span>\r\n       </div>', 1, '2018-02-06 13:48:16');
+INSERT INTO `article` VALUES (7, '2017年度社会工作者职业水平考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2017年度社会工作者职业水平考试各级别各科目合格标准均为60分（试卷满分均为100分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、闫妍)</span>\r\n       </div>', 1, '2018-02-07 13:48:44');
+INSERT INTO `article` VALUES (8, '2016年度一级注册消防工程师资格考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2016年度一级注册消防工程师资格考试各科目合格标准均为72分（试卷满分120分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：王金雪、秦华)</span>\r\n       </div>', 1, '2016-11-03 13:49:27');
+INSERT INTO `article` VALUES (9, '2016年下半年翻译专业资格(水平)考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2016年下半年翻译专业资格(水平)考试各语种各级别各科目的合格标准均为60分（试卷满分均为100分）</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：王金雪、秦华)</span>\r\n       </div>', 1, '2016-11-01 13:50:08');
+INSERT INTO `article` VALUES (10, '2016年度注册核安全工程师资格考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em\">\r\n	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2016年度注册核安全工程师资格考试《核安全相关法律法规》《核安全综合知识》和《核安全专业实务》科目合格标准均为84分（各科目试卷满分均为140分），《核安全案例分析》科目合格标准为60分（试卷满分为100分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：王金雪、秦华)</span>\r\n       </div>', 1, '2016-10-21 13:50:50');
+INSERT INTO `article` VALUES (11, '2016年度执业药师资格考试合格标准', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\"><p style=\"text-indent: 2em;\">\r\n	2016年度执业药师（药学、中药学）资格考试各科目合格标准均为72分（各科目试卷满分均为120分）。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：王金雪、秦华)</span>\r\n       </div>', 1, '2016-10-25 13:51:18');
+INSERT INTO `article` VALUES (12, '翻译专业资格(水平)考试', '<div class=\"text\">\r\n<div id=\"p_content\" deep=\"5\"><p style=\"text-indent: 2em;\">根据原人事部、中国外文出版发行事业局《翻译专业资格(水平)考试暂行规定》(国人部发[2003]21号)、《二级、三级翻译专业资格(水平)考试实施办法》(国人部发[2003]17号)和《关于印发〈资深翻译和一级翻译专业资格(水平)〉评价办法(试行)的通知》(人社部发[2011]51号)、文件精神设立翻译资格考试，首次考试于2003年12月开始进行。</p><p align=\"left\" style=\"text-indent: 2em;\"><strong>一、组织机构：</strong></p><p align=\"left\" style=\"text-indent: 2em;\">人力资源和社会保障部、中国外文出版发行事业局、外国专家局</p><p align=\"left\" style=\"text-indent: 2em;\"><strong>二、报名条件</strong></p><p align=\"left\" style=\"text-indent: 2em;\">凡遵守中华人民共和国宪法和法律，恪守职业道德，具有一定外语水平的人员，均可报名参加相应语种、级别的考试。</p><p align=\"left\" style=\"text-indent: 2em;\">经国家有关部门同意。获准在中华人民共和国境内就业的外籍人员及港、澳、台地区的专业人员，符合上述规定要求的，也可报名参加考试并申请登记。</p><p align=\"left\" style=\"text-indent:2em;\"><strong>三、考试时间、语种、科目介绍</strong></p><p align=\"left\" style=\"text-indent: 2em;\">2018年度全国翻译专业资格(水平)考试上半年于5月19、20日举行，下半年于11月3、4日举行。</p><p align=\"left\" style=\"text-indent: 2em;\">考试分7个语种，分别是英、日、法、阿拉伯、俄、德、西班牙语等语种;四个等级，即：资深翻译、一级翻译、二级翻译、三级翻译。上半年考试语种为英、日、法、阿拉伯语；下半年考试语种为英、俄、德、西语；其中英语一级只在上半年举行。</p><p align=\"left\" style=\"text-indent: 2em;\">一级笔译考试科目为《笔译实务》1个科目、一级口译考试科目为《口译实务》1个科目。二、三级笔译考试均设《笔译综合能力》和《笔译实务》2个科目;口译考试均设《口译综合能力》和《口译实务》2个科目，其中二级口译考试《口译实务》科目分设“交替传译”和“同声传译”2个专业类别。资深翻译尚未实施考试。</p><p align=\"left\" style=\"text-indent: 2em;\"><strong>四、报名办法</strong></p><p align=\"left\" style=\"text-indent: 2em;\">翻译考试实行网上、现场报名结合方式，报考人员需在规定时间内在指定网站或现场填写并提交报名信息，在规定时间内进行缴费。(报名具体安排详见各省(区、市)有关文件。</p><p align=\"left\" style=\"text-indent: 2em;\"><strong>五、成绩和证书管理</strong></p><p align=\"left\" style=\"text-indent:2em;\">全部应试人员须一次考试通过全部科目，考试成绩原则上在考试结束后两个月在全国专业技术人员资格考试服务平台和各省(区、市)人事考试机构网站发布。</p><p align=\"left\" style=\"text-indent: 2em;\">考试合格，由省(区、市)人力资源社会保障部门颁发《中华人民共和国翻译资格(水平)证书》。凡以不正当手段取得资格证书的，由各省(区、市)专业技术人员管理部门收回资格证书，按《专业技术人员资格考试违纪违规行为处理规定》(中华人民共和国人力资源和社会保障部令第31号)严肃处理。。</p><p align=\"left\" style=\"text-indent: 2em;\"><strong>六、登记注册</strong></p><p align=\"left\" style=\"text-indent: 2em;\">翻译资格(水平)证书实行定期登记制度。资格证书持有者应按有关规定每3年登记一次，同时需提交继续教育或业务培训证明。</p><div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div><div class=\"text_img\"></div></div>', 2, '2018-02-02 13:55:22');
+INSERT INTO `article` VALUES (13, '经济专业技术资格考试', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\" deep=\"5\"><p align=\"left\" style=\"text-indent: 2em;\">\r\n	根据原人事部《关于印发〈经济专业技术资格考试暂行规定〉及其〈实施办法〉的通知》（人职发〔1993〕1号）文件的精神，从1993年1月在经济专业技术人员中实行中、初级专业技术资格考试制度，在全国范围内统一组织实施经济专业技术资格考试。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>一、组织机构：</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	人力资源和社会保障部</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>二、报名条件</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	报名参加经济专业中、初级资格考试的人员应拥护中国共产党在社会主义初级阶段的基本路线，遵纪守法，遵守社会公德。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	报名参加经济专业初级资格考试的人员，还必须具备高中毕业以上学历。报名时，对尚未获得学历证书的应届毕业生，报名时须持能够证明其在考试年度可毕业的有效证件（如学生证等）和学校出具的应届毕业证明。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	报名参加经济专业中级资格考试的人员，还必须具备下列条件之一：</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	1. 中等专业学校毕业后从事专业工作满10年， 取得经济专业初级资格（含1992年年底以前通过国家考试获得的经济员资格或1993年1月6日前按照国家统一规定评聘的初级经济专业职务）。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2. 大学专科毕业后从事专业工作满6年； 大学本科毕业后从事专业工作满四年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	3. 获第二学士学位后或研究生班结业后从事专业工作满2年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	4. 获硕士学位后从事专业工作满1年；获博士学位。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	符合考试报名条件的香港、澳门居民，可以申请参加经济专业技术资格考试，在报名时须提交本人身份证明、国务院教育行政部门认可的相应专业学历或者学位证书、从事工作和实践年限证明。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>三、考试时间及科目介绍</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2018年度经济专业技术资格考试于11月3、4日举行。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	经济专业技术资格考试设置两个级别：经济专业初级资格、经济专业中级资格。每个级别均设经济基础知识和专业知识与实务两个科目（专业知识与实务包括工商管理、农业经济、商业经济、财政税收、金融、保险、运输经济（水路）、运输经济（公路）、运输经济（民航）、运输经济（铁路）、人力资源管理、邮电经济、房地产经济、旅游经济、建筑经济15个专业），全部为客观题；中、初级均实行电子化考试，考生全部在计算机上进行作答。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>四、报名办法</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	经济专业技术资格考试实行网上报名、网上缴费的方式，符合报考条件的人员需在规定时间内在指定网站填写并提交报名信息，上传照片，并按有关规定进行资格审查，确认符合报考条件后，在规定时间内进行网上缴费。（报名具体安排详见各省（区、市）有关文件。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>五、成绩和证书管理</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	应试人员须在一个考试年度内通过全部科目，考试成绩原则上在考试结束后两个月在全国专业技术人员资格考试服务平台和各省（区、市）人事考试机构网站发布。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	考试合格，由省（区、市）人力资源社会保障部门授予人力资源和社会保障部统一印制的《专业技术资格证书》，全国范围内有效。凡以不正当手段取得《资格证书》的，由各省（区、市）专业技术人员管理部门收回《资格证书》，按《专业技术人员资格考试违纪违规行为处理规定》（中华人民共和国人力资源和社会保障部令第31号）严肃处理。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、王金雪)</span>\r\n       </div>', 2, '2018-02-01 15:09:54');
+INSERT INTO `article` VALUES (14, '一级注册消防工程师资格考试', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\" deep=\"5\"><p align=\"left\" style=\"text-indent: 2em;\">\r\n	根据人力资源社会保障部、公安部《关于印发〈注册消防工程师制度暂行规定〉和〈注册消防工程师资格考试实施办法及注册消防工程师资格考核认定办法〉的通知》（人社部发〔2012〕56号）和《人力资源社会保障部办公厅&nbsp; 公安部办公厅关于举行一级注册消防工程师资格考试有关问题的通知》（人社厅发〔2015〕154号）文件精神，从2015年起在全国范围内组织实施一级注册消防工程师资格考试。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>一、组织机构：</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	人力资源社会保障部、公安部</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>二、报名条件：</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（一）凡中华人民共和国公民，遵守国家法律、法规，恪守职业道德，并符合一级注册消防工程师资格考试报名条件之一的，均可申请参加一级注册消防工程师资格考试。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	1、取得消防工程专业大学专科学历，工作满6年，其中从事消防安全技术工作满4年；或者取得消防工程相关专业大学专科学历，工作满7年，其中从事消防安全技术工作满5年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2、取得消防工程专业大学本科学历或者学位，工作满4年，其中从事消防安全技术工作满3年；或者取得消防工程相关专业大学本科学历，工作满5年，其中从事消防安全技术工作满4年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	3、取得含消防工程专业在内的双学士学位或者研究生班毕业，工作满3年，其中从事消防安全技术工作满2年；或者取得消防工程相关专业在内的双学士学位或者研究生班毕业，工作满4年，其中从事消防安全技术工作满3年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	4、取得消防工程专业硕士学历或者学位，工作满2年，其中从事消防安全技术工作满1年；或者取得消防工程相关专业硕士学历或者学位，工作满3年，其中从事消防安全技术工作满2年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	5、取得消防工程专业博士学历或者学位，从事消防安全技术工作满1年；或者取得消防工程相关专业博士学历或者学位，从事消防安全技术工作满2年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	6、取得其他专业相应学历或者学位的人员，其工作年限和从事消防安全技术工作年限相应增加1年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（二）凡符合一级注册消防工程师资格考试报名条件，并具备下列一项条件的可免试“消防安全技术实务”科目，只参加“消防安全技术综合能力”和“消防安全案例分析”2个科目的考试。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	1、2011年12月31日前，评聘高级工程师技术职务的；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2、通过全国统一考试取得一级注册建筑师资格证书，或者勘察设计各专业注册工程师资格证书的。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>三、考试时间及科目介绍</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2018年度一级注册消防工程师资格考试于11月10、11日举行。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	一级注册消防工程师资格考试设“消防安全技术实务”“消防安全技术综合能力”和“消防安全案例分析”3个科目。其中“消防安全技术实务”“消防安全技术综合能力”为客观题，采用答题卡作答；“消防安全案例分析”为主观题，采用专用答题卡作答，实行全国统一评卷。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	作答前请应试人员务必阅读试卷封二或专用答题卡首页的注意事项。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>四、报名办法</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	一级注册消防工程师资格考试实行网上报名、现场资格审查（部分省市实行报名初审、考后复核）、网上缴费的方式，符合报考条件的人员需在规定时间内在指定网站填写并提交报名信息，上传照片，并按有关规定进行资格审查，确认符合报考条件后，在规定时间内进行网上缴费。报名具体安排详见各省（区、市）有关文件。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>五、成绩和证书管理</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	一级注册消防工程师资格考试成绩实行滚动管理方式，参加全部3个科目考试（级别为考全科）的人员，必须在连续3个考试年度内通过应试科目；参加2个科目考试（级别为免1科）的人员必须在2个连续考试年度内通过应试科目，方能取得资格证书。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	考试合格，由人力资源社会保障部、公安部委托省、自治区、直辖市人力资源社会保障行政主管部门，颁发人力资源社会保障统一印制，人力资源社会保障部、公安部共同用印的《中华人民共和国一级注册消防工程师资格证书》。该证书在全国范围有效。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	对以不正当手段取得一级注册消防工程师资格证书的，按照《专业技术人员资格考试违纪违规行为处理规定》（人力资源社会保障令第31号）处理。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>六、注册登记</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	国家对注册消防工程师资格实行注册执业管理制度。取得一级注册消防工程师资格证书的人员应按有关规定到指定机构办理注册登记。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（考试具体信息请以考试通知或公告为准）</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、王金雪)</span>\r\n       </div>', 2, '2018-02-03 15:10:46');
+INSERT INTO `article` VALUES (15, '社会工作者职业水平考试', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\" deep=\"5\"><p align=\"left\" style=\"text-indent: 2em;\">\r\n	根据原人事部、民政部《关于印发〈社会工作者职业水平评价暂行规定〉和〈助理社会工作师、社会工作师职业水平考试实施办法〉的通知》（国人部发〔2006〕71号）精神，从2008年起，在全国范围内组织实施社会工作者职业水平考试。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>&nbsp;一、组织机构：</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	人力资源和社会保障部、民政部</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>&nbsp;二、报名条件</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（一）凡中华人民共和国公民，遵守国家法律、法规，恪守职业道德，并符合助理社会工作师或社会工作师报名条件的人员，均可申请参加相应级别的考试。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（二）助理社会工作师考试报名条件：</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	1、取得高中或者中专学历，从事社会工作满4年；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2、取得社会工作专业大专学历，从事社会工作满 2 年；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	3、社会工作专业本科应届毕业生；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	4、取得其他专业大专学历，从事社会工作满4年；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	5、取得其他专业本科及以上学历，从事社会工作满2年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（三）社会工作师考试报名条件：</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	1、取得高中或者中专学历，并取得助理社会工作师职业水平证书后，从事社会工作满 6 年；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2、取得社会工作专业大专及以上学历或学位，从事社会工作满 4 年；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	3、取得社会工作专业大学本科学历，从事社会工作满 3年；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	4、取得社会工作专业硕士学位，从事社会工作满 1 年；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	5、取得社会工作专业博士学位；</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	6、取得其他专业大专及以上学历或学位，其从事社会工作年限相应增加 2 年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	香港、澳门和台湾居民申请参加社会工作者职业水平考试的，报名时应提交本人身份证明、国务院教育行政部门认可的学历或学位证书、从事本专业工作实践证明。台湾居民还需提供《台湾居民来往大陆通行证》。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>&nbsp;三、考试时间及科目介绍</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2018年度社会工作者职业水平考试于6月9、10日举行。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	助理社会工作师考试科目为“社会工作综合能力（初级）”和“社会工作实务（初级）”。社会工作师考试科目为“社会工作综合能力（中级）”“社会工作实务（中级）”和“社会工作法规与政策”。其中“社会工作综合能力（初级）”“社会工作实务（初级）”“社会工作综合能力（中级）”和“社会工作法规与政策”为客观题，采用答题卡作答；“社会工作实务（中级）”为主观题，采用专用答题卡作答，实行全国统一评卷。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>&nbsp;四、报名办法</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	社会工作者职业水平考试实行网上报名、现场资格审查（部分省市实行报名初审、考后复核）、网上缴费的方式，符合报考条件的人员需在规定时间内在指定网站填写并提交报名信息，上传照片，并按有关规定进行资格审查，在规定时间内进行网上缴费。报名具体安排详见各省（区、市）有关文件。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>&nbsp;五、成绩和证书管理</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	参加助理社会工作师考试的人员，应在一个考试年度内通过全部科目的考试。社会工作师考试成绩实行两年为一个周期的滚动管理办法，参加考试的人员应在连续两个考试年度内通过全部科目的考试。考试成绩原则上在考试结束后两个月在全国专业技术人员资格考试服务平台（www.cpta.com.cn）和各省（区、市）人事考试机构网站发布。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	考试合格，由省（区、市）人力资源社会保障部门颁发《中华人民共和国社会工作者职业（水平）证书》。凡以不正当手段取得资格证书的，由各省（区、市）专业技术人员管理部门宣布证书成绩无效，按《专业技术人员资格考试违纪违规行为处理规定》（中华人民共和国人力资源和社会保障部令第31号）严肃处理。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>&nbsp;六、注册登记</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	社会工作者职业水平证书实行登记服务制度。水平证书持有者按有关规定办理登记手续。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、王金雪)</span>\r\n       </div>', 2, '2018-02-02 15:11:19');
+INSERT INTO `article` VALUES (16, '执业药师资格考试', '<div class=\"text\">\r\n			<div class=\"text_img\"></div>\r\n			<div id=\"p_content\" deep=\"5\"><p align=\"left\" style=\"text-indent: 2em;\">\r\n	1994年3月，原人事部、国家医药管理局颁布了《执业药师资格制度暂行规定》（人职发〔1994〕3号）;1995年7月，原人事部、国家中医药管理局颁布了《执业中药师资格制度暂行规定》（人职发〔1995〕69号），从此我国开始实施执业药师资格制度。1999年4月，原人事部、国家药品监督管理局下发的《人事部、国家药品监督管理局关于修订印发〈执业药师资格制度暂行规定〉和〈执业药师资格考试实施办法〉的通知》（人发〔1999〕34号），对原有考试管理办法进行了修订，明确执业药师、中药师统称为执业药师。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>一、组织机构：</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	人力资源和社会保障部、国家食品药品监督管理局</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>二、报名条件</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（一） 凡中华人民共和国公民和获准在我国境内就业的其他国籍的人员，遵纪守法并具备以下条件之一者，均可参加执业药师资格考试：</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	1、取得药学、中药学或相关专业中专学历，从事药学或中药学专业工作满7年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2、取得药学、中药学或相关专业大专学历，从事药学或中药学专业工作满5年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	3、取得药学、中药学或相关专业大学本科学历，从事药学或中药学专业工作满3年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	4、取得药学、中药学或相关专业第二学士学位、研究生班毕业或取得硕士学位，从事药学或中药学专业工作满1年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	5、取得药学、中药学或相关专业博士学位。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	（二）按照国家有关规定评聘为高级专业技术职务，并具备下列条件之一者，可免试“药学（或中药学）专业知识（一）”“药学（或中药学）专业知识（二）”2个科目：</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	1、中药学徒、药学或中药学专业中专毕业，连续从事药学或中药学专业工作满20年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2、取得药学、中药学专业或相关专业大专以上学历，连续从事药学或中药学专业工作满15年。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	根据《关于同意香港、澳门居民参加内地统一组织的专业技术人员资格考试有关问题的通知》（国人部发〔2005〕9号），凡符合执业药师资格考试相应规定的香港、澳民居民均可按照文件规定的程序和要求报名参加考试。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>三、考试时间及科目介绍</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	2018年度执业药师资格考试于10月13、14日举行。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	执业药师资格考试分为药学和中药学2个专业，均设4个科目：“药事管理与法规”“药学（或中药学）专业知识（一）”“药学（或中药学）专业知识（二）”“综合知识与技能（药学或中药学）”。各科目均为客观题，在答题卡上作答。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	作答前请应试人员务必阅读试卷封二。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>四、报名办法</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	执业药师资格考试实行网上报名、现场资格审查（部分省市实行报名初审、考后复核）、网上缴费的方式，符合报考条件的人员需在规定时间内在指定网站填写并提交报名信息，上传照片，并按有关规定进行资格审查，确认符合报考条件后，在规定时间内进行网上缴费。报名具体安排详见各省（区、市）有关文件。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>五、成绩和证书管理</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	执业药师资格考试以两年为一个周期，参加全部科目考试的人员须在连续两个考试年度内通过全部科目的考试。免试部分科目的人员须在一个考试年度内通过应试科目，方可获得合格证书。考试成绩原则上在考试结束后两个月在全国专业技术人员资格考试服务平台（www.cpta.com.cn）和各省（区、市）人事考试机构网站发布。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	考试合格，由省（区、市）人力资源社会保障部门颁发《执业药师资格证书》。凡以不正当手段取得资格证书的，由各省（区、市）专业技术人员管理部门收回资格证书，按《专业技术人员资格考试违纪违规行为处理规定》（中华人民共和国人力资源和社会保障部令第31号）严肃处理。</p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	<strong>六、登记注册</strong></p>\r\n<p align=\"left\" style=\"text-indent: 2em;\">\r\n	执业药师资格实行注册制度。资格证书持有者应按有关规定到指定机构申请注册。</p>\r\n<div class=\"zdfy clearfix\"></div><center><table border=\"0\" align=\"center\" width=\"40%\"><tbody><tr></tr></tbody></table></center></div>\r\n         	<div class=\"text_img\"></div>\r\n         	<span class=\"editor\" id=\"p_editor\">(责编：沈王一、王金雪)</span>\r\n       </div>', 2, '2018-02-04 15:11:55');
+
+-- ----------------------------
+-- Table structure for signup
+-- ----------------------------
+DROP TABLE IF EXISTS `signup`;
+CREATE TABLE `signup`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `s_name` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `u_id` int(11) DEFAULT NULL,
+  `state` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 39 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of signup
+-- ----------------------------
+INSERT INTO `signup` VALUES (36, '一级建造师考试', 3, 1);
+INSERT INTO `signup` VALUES (37, '一级注册测量师资格考试', 3, 2);
+INSERT INTO `signup` VALUES (38, '造价工程师执业资格考试', 3, 0);
+
+-- ----------------------------
+-- Table structure for subject
+-- ----------------------------
+DROP TABLE IF EXISTS `subject`;
+CREATE TABLE `subject`  (
+  `s_id` int(11) NOT NULL AUTO_INCREMENT,
+  `s_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `date_s` datetime(0) DEFAULT NULL,
+  `date_e` datetime(0) DEFAULT NULL,
+  PRIMARY KEY (`s_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of subject
+-- ----------------------------
+INSERT INTO `subject` VALUES (1, '一级建造师考试', '2018-03-01 09:00:00', '2018-03-01 11:30:00');
+INSERT INTO `subject` VALUES (2, '二级建造师考试', '2018-03-01 09:00:00', '2018-03-01 11:30:00');
+INSERT INTO `subject` VALUES (3, '执业药师资格考试', '2018-03-01 09:00:00', '2018-03-01 11:30:00');
+INSERT INTO `subject` VALUES (4, '注册城乡规划师考试', '2018-03-01 09:00:00', '2018-03-01 11:30:00');
+INSERT INTO `subject` VALUES (5, '造价工程师执业资格考试', '2018-03-01 09:00:00', '2018-03-01 11:30:00');
+INSERT INTO `subject` VALUES (6, '一级注册测量师资格考试', '2018-03-01 09:00:00', '2018-03-01 11:30:00');
+INSERT INTO `subject` VALUES (7, '二级注册测量师资格考试', '2018-03-01 09:00:00', '2018-03-01 11:30:00');
+
+-- ----------------------------
+-- Table structure for t_user
+-- ----------------------------
+DROP TABLE IF EXISTS `t_user`;
+CREATE TABLE `t_user`  (
+  `u_id` int(11) NOT NULL AUTO_INCREMENT,
+  `u_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `id_num` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `province` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `school` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `major` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `state` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  PRIMARY KEY (`u_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of t_user
+-- ----------------------------
+INSERT INTO `t_user` VALUES (3, '张三', '220521197201290035', '123', '男', '黑龙江哈尔滨', '黑龙江省哈尔滨市南岗区学府路74号', '黑龙江大学', '计算机', '2', '团员', '220521197201290035.jpg');
+
+SET FOREIGN_KEY_CHECKS = 1;

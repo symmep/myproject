@@ -1,0 +1,55 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+#content {
+    display: inline-block;
+    position: fixed;
+    bottom:10px;
+    right: 10px;
+}
+#content h1{
+    margin: 0;
+}
+.countdown {
+    display: table-cell;
+    font-weight: normal;
+}
+.countdown-alt-1 .item {
+    position: relative;
+}
+.countdown-alt-1 .dd,
+.countdown-alt-1 .hh-1,
+.countdown-alt-1 .hh-2,
+.countdown-alt-1 .mm-1,
+.countdown-alt-1 .mm-2,
+.countdown-alt-1 .ss-1,
+.countdown-alt-1 .ss-2 {
+    font-family: 'Righteous', cursive;
+    background: #F6F6F6;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 25px;
+    margin: 1px 2px;
+    min-width: 25px;
+    text-align: center;
+}
+.countdown-alt-1 .hh-1,
+.countdown-alt-1 .hh-2,
+.countdown-alt-1 .mm-1,
+.countdown-alt-1 .mm-2,
+.countdown-alt-1 .ss-1,
+.countdown-alt-1 .ss-2 {
+    width: 25px;
+    max-width: 25px;
+}
+.countdown-alt-1 .label {
+   display: none;
+}
+.countdown-alt-1 .separator-dd,
+.countdown-alt-1 .separator {
+    color: #000;
+    font-size: 25px;
+    position: relative;
+}
+
+

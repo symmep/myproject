@@ -1,0 +1,101 @@
+body{
+    width: 100%;
+    background: url("../images/bg.jpg") top repeat-x #fff;
+    background-position: 0 -205px;
+}
+header{
+    margin: 0 auto;
+    max-width: 1002px;
+    text-align: center;
+    height:85px;
+    background: url("../images/nav03.gif") top center repeat-x #fff;
+    background-position: -1px 0;
+}
+header h1 a,header h1{
+    font-size: 40px;
+    color: #FFF;
+}
+header h1 a:link,header h1 a:visited,header h1 a:active,header h1 a:hover,header h1 a:focus{
+    text-decoration: none;
+    color: #fff;
+}
+.user{
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin:-20px auto 0;
+}
+.user span{
+    color: #337ab7;
+    cursor: pointer;
+}
+.container{
+    width: 980px;
+    min-height: 545px;
+    background: #fff;
+}
+.row{
+    background: url("../images/bg01.gif") top center no-repeat #fff;
+}
+.content{
+    margin-top: 30px;
+}
+
+.nav{
+    margin-top: 30px;
+}
+.nav li{
+    margin:0 auto 25px;
+    width: 80%;
+    height: 60px;
+}
+.nav li a{
+    width: 100%;
+    height: 60px;
+    color: #920100;
+    text-decoration: none;
+    display: inline-block;
+    padding:0 0 0 85px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;
+}
+.nav li a:hover,.nav li a:focus{
+    font-weight:bold;
+    background-color: transparent;
+}
+.a1{
+    background-image: url("../images/icon1.jpg");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+}
+.a2{
+    background-image: url("../images/icon4.jpg");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+}
+.a3{
+    background-image: url("../images/icon2.jpg");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+}
+.a4{
+    background-image: url("../images/icon3.jpg");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+}
+.a5 {
+    background-image: url("../images/icon5.jpg");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+footer{
+    height: 30px;
+    background: #fdead1;
+}
