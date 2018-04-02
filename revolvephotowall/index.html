@@ -85,7 +85,7 @@
                     loadSuccess();
                 }
             };
-            oBigImg.src = "img/"+ (i + 1) +".jpg";
+            oBigImg.src = "img/"+ (i + 1) +".webp";
             var oThumbImg = new Image();
             oThumbImg.onload =function(){
                 count++;
@@ -93,7 +93,7 @@
                     loadSuccess()
                 }
             };
-            oThumbImg.src = "img/thumbs/"+(i + 1)+".jpg";
+            oThumbImg.src = "img/thumbs/"+(i + 1)+".webp";
         }
         var index = 0;
         function  loadSuccess(){
@@ -102,7 +102,7 @@
                 index++;
                 var oDiv = document.createElement("div");
                 oDiv.className = "img";
-                oDiv.style.backgroundImage = "url(img/thumbs/"+ index +".jpg)";
+                oDiv.style.backgroundImage = "url(img/thumbs/"+ index +".webp)";
                 oDiv.pos={
                     col : j,
                     row : i
@@ -144,7 +144,7 @@
                         }else{
                             index =e.target.parentNode.index;
                         }
-                        oSpan.style.backgroundImage = "url(img/"+ index +".jpg)";
+                        oSpan.style.backgroundImage = "url(img/"+ index +".webp)";
                         oSpan.style.backgroundPosition = -THUMB_W * aImg[i].pos.col +"px "+ (-THUMB_H *aImg[i].pos.row) +"px";
                     }
                     oPrev.style.display = oNext.style.display = "block";
@@ -184,7 +184,7 @@
             });
             for(var i=0; i<aImg.length; i++){
                 var oSpan = aImg[arr[i]].getElementsByTagName("span")[0];
-                oSpan.style.backgroundImage = "url(img/" + index +".jpg)";
+                oSpan.style.backgroundImage = "url(img/" + index +".webp)";
                 oSpan.style.transitionDelay = (i + 2) * 50 +"ms";
             }
         };

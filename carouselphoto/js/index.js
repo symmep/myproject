@@ -6,7 +6,7 @@ require.config({
 require(["jquery","./carousel"],function ($, Carousel){
     var settings1 = {
         selector : "#container1",
-        imgArr : ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"],
+        imgArr : ["img/1.webp","img/2.webp","img/3.webp","img/4.webp"],
         speed : 1000,
         btnStyle : "square",
         arrowPos : "bottom"
@@ -16,7 +16,7 @@ require(["jquery","./carousel"],function ($, Carousel){
 
     var settings2 = {
         selector : "#container2",
-        imgArr : ["img/1.jpg","img/2.jpg","img/4.jpg"],
+        imgArr : ["img/1.webp","img/2.webp","img/4.webp"],
         speed : 1500,
         btnStyle : "circle",
         arrowPos : "center"
